@@ -1,0 +1,21 @@
+<polymer-element name="main-view">
+  <template>
+    <h1>Multiplication Table</h1>
+
+    <div class="box-container">
+      <table class="table table-bordered">
+        <tbody id="table-body">
+          <template repeat="{{row in tableList}}">
+            <tr>
+              <template repeat="{{col in row}}">
+                <td>{{col}}</td>
+              </template>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+  </template>
+
+  <script type="application/dart" src="main_view.dart"></script>
+</polymer-element>
