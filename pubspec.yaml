@@ -1,5 +1,5 @@
-name: Polymer_Template
-description: A Polymer Dart application.
+name: multiplication_table
+description: A learning exercise creating a multiplication table using Dart with Polymer.
 dependencies:
   polymer: any
 transformers:
