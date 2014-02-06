@@ -1,6 +1,5 @@
 library main_view;
 
-import 'dart:html';
 import 'package:polymer/polymer.dart';
 
 @CustomTag('main-view')
@@ -14,25 +13,26 @@ class MainView extends PolymerElement {
   List<List> tableList = toObservable([]);
   
   // non-visual initialization can be done here
-  MainView.created() : super.created();
+  MainView.created() : super.created() {
+    multiplication();
+  }
 
   // other initialization can be done here
   @override void enteredView() {
     super.enteredView();
     print("MainView::enteredView()");
-    multiplication();
   }
   
   void multiplication() {
     
-//    Creating row header
+//  Creating row header
     tableList.add(toObservable([]));
     tableList[0].add("X");
-    
     for (int col = COL_MIN; col <= COL_MAX; col++) {
       tableList[0].add(col);
     }
     
+//  This generates the multiplication table/calculates the math
     for (int row = ROW_MIN; row <= ROW_MAX; row++) {
       tableList.add(toObservable([]));
       tableList[row + 1].add(row);
